@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+
+    <record id="channel_website" model="slide.channel">
+        <field name="name">Building Your Organization's Website</field>
+        <field name="channel_type">training</field>
+        <field name="description" type="html">
+            <p>A non-technical, click-by-click guide to running your
+            organization's public website in Odoo - no coding, no design
+            background required.</p>
+        </field>
+        <field name="visibility">members</field>
+        <field name="enroll">invite</field>
+        <field name="is_published" eval="True" />
+        <field name="enroll_group_ids" eval="[(6, 0, [ref('website.group_website_designer')])]" />
+    </record>
+
+    <!-- =================== Section 1: Getting oriented =================== -->
+    <record id="section_orient" model="slide.slide">
+        <field name="channel_id" ref="channel_website" />
+        <field name="name">Getting oriented</field>
+        <field name="is_category" eval="True" />
+        <field name="sequence">10</field>
+    </record>
+
+    <record id="lesson_open_editor" model="slide.slide">
+        <field name="channel_id" ref="channel_website" />
+        <field name="name">Opening the website editor</field>
+        <field name="slide_category">article</field>
+        <field name="sequence">11</field>
+        <field name="html_content" type="html">
+            <p>Open the <strong>Website</strong> app from the main Odoo
+            menu - it lands you on your homepage, shown exactly as a
+            visitor would see it. At the top, an <strong>Edit</strong>
+            button switches you into editing mode: the page stays visible,
+            but now you can click directly on any block of it to change
+            what's there. Nothing you do is visible to visitors until you
+            explicitly save it, so there's no way to break the live site
+            by clicking around.</p>
+        </field>
+    </record>
+
+    <record id="lesson_get_around" model="slide.slide">
+        <field name="channel_id" ref="channel_website" />
+        <field name="name">Finding your way around</field>
+        <field name="slide_category">article</field>
+        <field name="sequence">12</field>
+        <field name="html_content" type="html">
+            <p>The <strong>Site</strong> menu (top of the Website app) is
+            where the bigger-picture tools live: <strong>Homepage</strong>
+            jumps back to the front page from anywhere, <strong>Menu
+            Editor</strong> changes your site's navigation bar,
+            <strong>Content</strong> lists every page you've built, and
+            <strong>This Page</strong> has tools scoped to whatever page
+            you're currently looking at - its Properties, an
+            <strong>Optimize SEO</strong> wizard, and an Edit Menu shortcut.
+            You won't need most of this on day one - the block-editing
+            workflow in the next section covers almost everything a new
+            page needs.</p>
+        </field>
+    </record>
+
+    <!-- =================== Section 2: Building pages =================== -->
+    <record id="section_pages" model="slide.slide">
+        <field name="channel_id" ref="channel_website" />
+        <field name="name">Building pages</field>
+        <field name="is_category" eval="True" />
+        <field name="sequence">20</field>
+    </record>
+
+    <record id="lesson_new_page" model="slide.slide">
+        <field name="channel_id" ref="channel_website" />
+        <field name="name">Adding a new page</field>
+        <field name="slide_category">article</field>
+        <field name="sequence">21</field>
+        <field name="html_content" type="html">
+            <p>Click <strong>+ New</strong> and choose <strong>Page</strong>
+            to open the new-page dialog. Pick a starting template (a
+            blank "Basic" page is the simplest place to start), give the
+            page a name, and decide whether to <strong>Add to menu</strong>
+            right away - you can always add it to the navigation bar
+            later, so leave this off if you're not ready for visitors to
+            find it yet. Click <strong>Create</strong> and you land right
+            on the new page in edit mode.</p>
+        </field>
+    </record>
+
+    <record id="lesson_blocks" model="slide.slide">
+        <field name="channel_id" ref="channel_website" />
+        <field name="name">Working with blocks</field>
+        <field name="slide_category">article</field>
+        <field name="sequence">22</field>
+        <field name="html_content" type="html">
+            <p>A page is built out of <strong>blocks</strong> stacked on
+            top of each other - a text section, an image gallery, a team
+            grid, a contact form, and so on. In edit mode, the
+            <strong>Blocks</strong> tab on the right shows every block
+            available, grouped by category; drag one onto the page where
+            you want it. Once a block is on the page, hover over it to
+            get handles for moving it up/down or deleting it, and click
+            directly into it to edit its actual content.</p>
+        </field>
+    </record>
+
+    <record id="lesson_editing" model="slide.slide">
+        <field name="channel_id" ref="channel_website" />
+        <field name="name">Editing text, images, and colors</field>
+        <field name="slide_category">article</field>
+        <field name="sequence">23</field>
+        <field name="html_content" type="html">
+            <p>Click directly on any text on the page and start typing -
+            it edits in place, the same way a word processor would.
+            Click an image to replace it with one from your computer or
+            Odoo's built-in stock-photo library. Click a block itself
+            (not the text or image inside it) and the <strong>
+            Customize</strong> tab shows that block's own options - its
+            background color, spacing, and layout - without touching any
+            other block on the page. When it looks right, click
+            <strong>Save</strong> in the top bar; <strong>Discard</strong>
+            throws away everything since your last save.</p>
+        </field>
+    </record>
+
+    <!-- ============= Section 3: Menus and publishing ============= -->
+    <record id="section_publish" model="slide.slide">
+        <field name="channel_id" ref="channel_website" />
+        <field name="name">Menus and publishing</field>
+        <field name="is_category" eval="True" />
+        <field name="sequence">30</field>
+    </record>
+
+    <record id="lesson_menu" model="slide.slide">
+        <field name="channel_id" ref="channel_website" />
+        <field name="name">Adding a page to the menu</field>
+        <field name="slide_category">article</field>
+        <field name="sequence">31</field>
+        <field name="html_content" type="html">
+            <p>If you didn't add a new page to the menu when you created
+            it, open <strong>Site &gt; Menu Editor</strong> at any time:
+            it lists every item in your navigation bar, in order. Add an
+            entry, point it at the page you built, and drag entries up or
+            down to reorder them - the visitor-facing menu updates the
+            moment you save.</p>
+        </field>
+    </record>
+
+    <record id="lesson_publish" model="slide.slide">
+        <field name="channel_id" ref="channel_website" />
+        <field name="name">Publishing a page</field>
+        <field name="slide_category">article</field>
+        <field name="sequence">32</field>
+        <field name="html_content" type="html">
+            <p>A brand-new page starts out <strong>Unpublished</strong> -
+            visible to you while signed in, invisible to an ordinary
+            visitor. The publish toggle sits in the top-right of the page
+            when you're viewing it: switch it to <strong>Published</strong>
+            once the page is actually ready. This is deliberate - it lets
+            you build and review a page for as long as you need before
+            anyone outside your organization ever sees it.</p>
+        </field>
+    </record>
+
+    <!-- ============ Section 4: Settings worth knowing ============ -->
+    <record id="section_settings" model="slide.slide">
+        <field name="channel_id" ref="channel_website" />
+        <field name="name">Settings worth knowing</field>
+        <field name="is_category" eval="True" />
+        <field name="sequence">40</field>
+    </record>
+
+    <record id="lesson_settings" model="slide.slide">
+        <field name="channel_id" ref="channel_website" />
+        <field name="name">Name, favicon, company info, and a word on SEO</field>
+        <field name="slide_category">article</field>
+        <field name="sequence">41</field>
+        <field name="html_content" type="html">
+            <p>Under <strong>Site &gt; Settings</strong> (in the
+            Configuration menu), the settings worth knowing early on are
+            under <strong>Website Identification</strong> - your site's
+            <strong>Name</strong> and <strong>Favicon</strong> (the small
+            icon shown in a browser tab) - and the <strong>Company</strong>
+            section, which controls what address/contact details the site
+            pulls in automatically. You'll also see settings for Google
+            Analytics, a Google Search Console code, and a robots.txt
+            file - those are genuinely more technical, aimed at someone
+            actively working on search-engine visibility, and are safe to
+            leave alone or hand off to a developer later.</p>
+            <p>For any one page, <strong>Site &gt; This Page &gt; Optimize
+            SEO</strong> lets you set a page title, description, and
+            keywords that show up in search results - worth doing for your
+            homepage and any page you expect people to search for, but not
+            something to worry over for every single page on day one.</p>
+        </field>
+    </record>
+
+    <!-- ========================= Quiz ========================= -->
+    <record id="slide_quiz" model="slide.slide">
+        <field name="channel_id" ref="channel_website" />
+        <field name="name">Check your understanding</field>
+        <field name="slide_category">quiz</field>
+        <field name="sequence">90</field>
+    </record>
+
+    <record id="quiz_q1" model="slide.question">
+        <field name="slide_id" ref="slide_quiz" />
+        <field name="sequence">1</field>
+        <field name="question">You're clicking around in Edit mode, trying things out. Can visitors see your changes?</field>
+    </record>
+    <record id="quiz_q1_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_q1" />
+        <field name="sequence">1</field>
+        <field name="text_value">No - nothing shows on the live site until you save it</field>
+        <field name="is_correct" eval="True" />
+    </record>
+    <record id="quiz_q1_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_q1" />
+        <field name="sequence">2</field>
+        <field name="text_value">Yes - every click updates the live site immediately</field>
+        <field name="is_correct" eval="False" />
+    </record>
+    <record id="quiz_q1_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_q1" />
+        <field name="sequence">3</field>
+        <field name="text_value">Only visitors on mobile devices</field>
+        <field name="is_correct" eval="False" />
+    </record>
+    <record id="quiz_q1_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_q1" />
+        <field name="sequence">4</field>
+        <field name="text_value">Only after 24 hours</field>
+        <field name="is_correct" eval="False" />
+    </record>
+
+    <record id="quiz_q2" model="slide.question">
+        <field name="slide_id" ref="slide_quiz" />
+        <field name="sequence">2</field>
+        <field name="question">Where do you drag a new content section (text, images, a form...) onto a page?</field>
+    </record>
+    <record id="quiz_q2_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_q2" />
+        <field name="sequence">1</field>
+        <field name="text_value">From the Blocks tab</field>
+        <field name="is_correct" eval="True" />
+    </record>
+    <record id="quiz_q2_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_q2" />
+        <field name="sequence">2</field>
+        <field name="text_value">From the Menu Editor</field>
+        <field name="is_correct" eval="False" />
+    </record>
+    <record id="quiz_q2_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_q2" />
+        <field name="sequence">3</field>
+        <field name="text_value">From the Optimize SEO wizard</field>
+        <field name="is_correct" eval="False" />
+    </record>
+    <record id="quiz_q2_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_q2" />
+        <field name="sequence">4</field>
+        <field name="text_value">You have to write HTML yourself</field>
+        <field name="is_correct" eval="False" />
+    </record>
+
+    <record id="quiz_q3" model="slide.question">
+        <field name="slide_id" ref="slide_quiz" />
+        <field name="sequence">3</field>
+        <field name="question">You just built a new page and it isn't in the navigation bar yet. What's the quickest way to add it?</field>
+    </record>
+    <record id="quiz_q3_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_q3" />
+        <field name="sequence">1</field>
+        <field name="text_value">Delete the page and start over with "Add to menu" checked</field>
+        <field name="is_correct" eval="False" />
+    </record>
+    <record id="quiz_q3_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_q3" />
+        <field name="sequence">2</field>
+        <field name="text_value">Open Site &gt; Menu Editor and add an entry pointing at the page</field>
+        <field name="is_correct" eval="True" />
+    </record>
+    <record id="quiz_q3_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_q3" />
+        <field name="sequence">3</field>
+        <field name="text_value">It's automatic - every page joins the menu eventually</field>
+        <field name="is_correct" eval="False" />
+    </record>
+    <record id="quiz_q3_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_q3" />
+        <field name="sequence">4</field>
+        <field name="text_value">Publish the page and the menu updates itself</field>
+        <field name="is_correct" eval="False" />
+    </record>
+
+    <record id="quiz_q4" model="slide.question">
+        <field name="slide_id" ref="slide_quiz" />
+        <field name="sequence">4</field>
+        <field name="question">Which of these is safe to skip on day one as "more technical, deal with it later"?</field>
+    </record>
+    <record id="quiz_q4_a1" model="slide.answer">
+        <field name="question_id" ref="quiz_q4" />
+        <field name="sequence">1</field>
+        <field name="text_value">Setting the website Name and Favicon</field>
+        <field name="is_correct" eval="False" />
+    </record>
+    <record id="quiz_q4_a2" model="slide.answer">
+        <field name="question_id" ref="quiz_q4" />
+        <field name="sequence">2</field>
+        <field name="text_value">A Google Search Console code and robots.txt</field>
+        <field name="is_correct" eval="True" />
+    </record>
+    <record id="quiz_q4_a3" model="slide.answer">
+        <field name="question_id" ref="quiz_q4" />
+        <field name="sequence">3</field>
+        <field name="text_value">Publishing your homepage</field>
+        <field name="is_correct" eval="False" />
+    </record>
+    <record id="quiz_q4_a4" model="slide.answer">
+        <field name="question_id" ref="quiz_q4" />
+        <field name="sequence">4</field>
+        <field name="text_value">Adding a page to the menu</field>
+        <field name="is_correct" eval="False" />
+    </record>
+
+</odoo>
