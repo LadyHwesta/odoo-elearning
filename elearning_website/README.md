@@ -20,6 +20,17 @@ early on (name, favicon, company info, and a plain-language word on SEO
 that deliberately leaves the more technical settings - Google Search
 Console, robots.txt - for later). A 4-question quiz at the end.
 
+## Look and feel
+
+Each lesson uses callout boxes, numbered step lists, state badges, and a
+few illustrative diagrams (labeled as such - built with styled HTML/CSS,
+not screenshots of the real running app, so they never go stale as the
+UI changes). The styling lives in
+`static/src/scss/course_content.scss`, loaded via `web.assets_frontend`
+and scoped under `.oe-course-content` so it can't leak into the rest of
+the site's theme. This is the pattern the other eLearning packs in this
+account are being brought in line with.
+
 ## Access
 
 Gated (`visibility="members"`, `enroll="invite"`); everyone in

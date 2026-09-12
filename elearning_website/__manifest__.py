@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     "name": "eLearning: Building Your Organization's Website",
-    "version": "19.0.1.0.0",
+    "version": "19.0.1.1.0",
     "category": "Website/eLearning",
     "summary": "eLearning course: a non-technical guide to Odoo's Website app",
     "description": """
@@ -25,5 +25,10 @@ organization. Install it on any Odoo 19 Community instance.
     "data": [
         "data/slide_channel_data.xml",
     ],
+    "assets": {
+        "web.assets_frontend": [
+            "elearning_website/static/src/scss/course_content.scss",
+        ],
+    },
     "application": False,
 }

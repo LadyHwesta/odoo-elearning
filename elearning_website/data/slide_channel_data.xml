@@ -29,14 +29,48 @@
         <field name="slide_category">article</field>
         <field name="sequence">11</field>
         <field name="html_content" type="html">
-            <p>Open the <strong>Website</strong> app from the main Odoo
-            menu - it lands you on your homepage, shown exactly as a
-            visitor would see it. At the top, an <strong>Edit</strong>
-            button switches you into editing mode: the page stays visible,
-            but now you can click directly on any block of it to change
-            what's there. Nothing you do is visible to visitors until you
-            explicitly save it, so there's no way to break the live site
-            by clicking around.</p>
+            <div class="oe-course-content">
+                <p>Open the <strong>Website</strong> app from the main Odoo
+                menu - it lands you on your homepage, shown exactly as a
+                visitor would see it. At the top, an <strong>Edit</strong>
+                button switches you into editing mode: the page stays
+                visible, but now you can click directly on any block of it
+                to change what's there.</p>
+
+                <div class="oe-diagram">
+                    <div class="oe-flow">
+                        <div class="oe-flow-step">
+                            <span class="oe-flow-step-icon"><i class="fa fa-globe" /></span>
+                            Website app
+                        </div>
+                        <span class="oe-flow-arrow"><i class="fa fa-long-arrow-right" /></span>
+                        <div class="oe-flow-step">
+                            <span class="oe-flow-step-icon"><i class="fa fa-pencil" /></span>
+                            Click "Edit"
+                        </div>
+                        <span class="oe-flow-arrow"><i class="fa fa-long-arrow-right" /></span>
+                        <div class="oe-flow-step">
+                            <span class="oe-flow-step-icon"><i class="fa fa-th-large" /></span>
+                            Page becomes editable
+                        </div>
+                    </div>
+                    <p class="oe-diagram-caption">
+                        <span class="oe-diagram-caption-tag">Illustration</span>
+                        the three-step path from opening the app to being
+                        able to edit - not a capture of the real screen.
+                    </p>
+                </div>
+
+                <div class="oe-callout oe-callout-good">
+                    <span class="oe-callout-icon"><i class="fa fa-check-circle" /></span>
+                    <div>
+                        <span class="oe-callout-label">Nothing to worry about</span>
+                        <p>Nothing you do in Edit mode is visible to visitors
+                        until you explicitly save it, so there's no way to
+                        break the live site just by clicking around.</p>
+                    </div>
+                </div>
+            </div>
         </field>
     </record>
 
@@ -46,17 +80,60 @@
         <field name="slide_category">article</field>
         <field name="sequence">12</field>
         <field name="html_content" type="html">
-            <p>The <strong>Site</strong> menu (top of the Website app) is
-            where the bigger-picture tools live: <strong>Homepage</strong>
-            jumps back to the front page from anywhere, <strong>Menu
-            Editor</strong> changes your site's navigation bar,
-            <strong>Content</strong> lists every page you've built, and
-            <strong>This Page</strong> has tools scoped to whatever page
-            you're currently looking at - its Properties, an
-            <strong>Optimize SEO</strong> wizard, and an Edit Menu shortcut.
-            You won't need most of this on day one - the block-editing
-            workflow in the next section covers almost everything a new
-            page needs.</p>
+            <div class="oe-course-content">
+                <p>The <strong>Site</strong> menu (top of the Website app)
+                is where the bigger-picture tools live - a handful of
+                items that cover almost anything you'd need beyond the
+                day-to-day editing in the next section.</p>
+
+                <div class="oe-diagram">
+                    <div class="oe-mock-bar">
+                        <span class="oe-mock-dots"><span /><span /><span /></span>
+                        Site
+                    </div>
+                    <div class="oe-mock-body">
+                        <div class="oe-columns">
+                            <div class="oe-column">
+                                <h4><i class="fa fa-home" /> Homepage</h4>
+                                <p class="mb-0 text-muted">Jump back to the
+                                front page from anywhere.</p>
+                            </div>
+                            <div class="oe-column">
+                                <h4><i class="fa fa-bars" /> Menu Editor</h4>
+                                <p class="mb-0 text-muted">Change your
+                                site's navigation bar.</p>
+                            </div>
+                            <div class="oe-column">
+                                <h4><i class="fa fa-files-o" /> Content</h4>
+                                <p class="mb-0 text-muted">Lists every page
+                                you've built.</p>
+                            </div>
+                            <div class="oe-column">
+                                <h4><i class="fa fa-file-text-o" /> This Page</h4>
+                                <ul class="text-muted">
+                                    <li>Properties</li>
+                                    <li>Optimize SEO</li>
+                                    <li>Edit Menu (shortcut)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="oe-diagram-caption">
+                        <span class="oe-diagram-caption-tag">Illustration</span>
+                        what's under the Site menu, redrawn for clarity -
+                        the real menu is a plain dropdown list.
+                    </p>
+                </div>
+
+                <div class="oe-callout">
+                    <span class="oe-callout-icon"><i class="fa fa-lightbulb-o" /></span>
+                    <div>
+                        <span class="oe-callout-label">You won't need most of this yet</span>
+                        <p>The block-editing workflow in the next section
+                        covers almost everything a new page needs.</p>
+                    </div>
+                </div>
+            </div>
         </field>
     </record>
 
@@ -74,14 +151,59 @@
         <field name="slide_category">article</field>
         <field name="sequence">21</field>
         <field name="html_content" type="html">
-            <p>Click <strong>+ New</strong> and choose <strong>Page</strong>
-            to open the new-page dialog. Pick a starting template (a
-            blank "Basic" page is the simplest place to start), give the
-            page a name, and decide whether to <strong>Add to menu</strong>
-            right away - you can always add it to the navigation bar
-            later, so leave this off if you're not ready for visitors to
-            find it yet. Click <strong>Create</strong> and you land right
-            on the new page in edit mode.</p>
+            <div class="oe-course-content">
+                <ol class="oe-steps">
+                    <li>
+                        <p>Click <strong>+ New</strong> and choose
+                        <strong>Page</strong> to open the new-page dialog.</p>
+                    </li>
+                    <li>
+                        <p>Pick a starting template - a blank
+                        <strong>"Basic"</strong> page is the simplest place
+                        to start.</p>
+                    </li>
+                    <li>
+                        <p>Give the page a name.</p>
+                    </li>
+                    <li>
+                        <p>Decide whether to switch on <strong>Add to
+                        menu</strong> right away - you can always add it to
+                        the navigation bar later, so leave it off if you're
+                        not ready for visitors to find it yet.</p>
+                    </li>
+                    <li>
+                        <p>Click <strong>Create</strong> and you land right
+                        on the new page in edit mode.</p>
+                    </li>
+                </ol>
+
+                <div class="oe-diagram">
+                    <div class="oe-mock-bar">
+                        <span class="oe-mock-dots"><span /><span /><span /></span>
+                        New Page
+                    </div>
+                    <div class="oe-mock-body">
+                        <p class="mb-2"><strong>Choose a template</strong></p>
+                        <p>
+                            <span class="oe-badge oe-badge-accent">Basic</span>
+                            <span class="oe-badge">About Us</span>
+                            <span class="oe-badge">Services</span>
+                            <span class="oe-badge">Contact</span>
+                        </p>
+                        <p class="mb-2 mt-3"><strong>Page name</strong></p>
+                        <p class="text-muted">Our Programs</p>
+                        <p class="d-flex align-items-center gap-2 mt-3">
+                            <span class="oe-mock-btn oe-mock-btn-outline">Add to menu</span>
+                            <span class="oe-mock-btn"><i class="fa fa-plus" /> Create</span>
+                        </p>
+                    </div>
+                    <p class="oe-diagram-caption">
+                        <span class="oe-diagram-caption-tag">Illustration</span>
+                        the shape of the New Page dialog - your actual
+                        template choices will differ.
+                    </p>
+                </div>
+            </div>
         </field>
     </record>
 
@@ -91,14 +213,52 @@
         <field name="slide_category">article</field>
         <field name="sequence">22</field>
         <field name="html_content" type="html">
-            <p>A page is built out of <strong>blocks</strong> stacked on
-            top of each other - a text section, an image gallery, a team
-            grid, a contact form, and so on. In edit mode, the
-            <strong>Blocks</strong> tab on the right shows every block
-            available, grouped by category; drag one onto the page where
-            you want it. Once a block is on the page, hover over it to
-            get handles for moving it up/down or deleting it, and click
-            directly into it to edit its actual content.</p>
+            <div class="oe-course-content">
+                <p>A page is built out of <strong>blocks</strong> stacked
+                on top of each other - a text section, an image gallery, a
+                team grid, a contact form, and so on. In edit mode, the
+                <strong>Blocks</strong> tab on the right shows every block
+                available, grouped by category; drag one onto the page
+                where you want it.</p>
+
+                <div class="oe-diagram">
+                    <div class="oe-columns">
+                        <div class="oe-column">
+                            <h4><i class="fa fa-th" /> Blocks panel</h4>
+                            <p>
+                                <span class="oe-badge">Text</span>
+                                <span class="oe-badge">Image</span>
+                                <span class="oe-badge">Gallery</span>
+                                <span class="oe-badge">Form</span>
+                                <span class="oe-badge">Team</span>
+                            </p>
+                        </div>
+                        <div class="oe-column">
+                            <h4><i class="fa fa-file-o" /> Your page</h4>
+                            <p class="text-muted mb-0">
+                                <i class="fa fa-long-arrow-left" /> drag a
+                                block here to add it
+                            </p>
+                        </div>
+                    </div>
+                    <p class="oe-diagram-caption">
+                        <span class="oe-diagram-caption-tag">Illustration</span>
+                        dragging a block from the panel onto the page - the
+                        real Blocks panel has far more choices than shown
+                        here.
+                    </p>
+                </div>
+
+                <div class="oe-callout">
+                    <span class="oe-callout-icon"><i class="fa fa-arrows" /></span>
+                    <div>
+                        <span class="oe-callout-label">Once it's on the page</span>
+                        <p>Hover over a block to get handles for moving it
+                        up/down or deleting it, and click directly into it
+                        to edit its actual content.</p>
+                    </div>
+                </div>
+            </div>
         </field>
     </record>
 
@@ -108,16 +268,61 @@
         <field name="slide_category">article</field>
         <field name="sequence">23</field>
         <field name="html_content" type="html">
-            <p>Click directly on any text on the page and start typing -
-            it edits in place, the same way a word processor would.
-            Click an image to replace it with one from your computer or
-            Odoo's built-in stock-photo library. Click a block itself
-            (not the text or image inside it) and the <strong>
-            Customize</strong> tab shows that block's own options - its
-            background color, spacing, and layout - without touching any
-            other block on the page. When it looks right, click
-            <strong>Save</strong> in the top bar; <strong>Discard</strong>
-            throws away everything since your last save.</p>
+            <div class="oe-course-content">
+                <ol class="oe-steps">
+                    <li>
+                        <p><i class="fa fa-font" /> Click directly on any
+                        text on the page and start typing - it edits in
+                        place, the same way a word processor would.</p>
+                    </li>
+                    <li>
+                        <p><i class="fa fa-picture-o" /> Click an image to
+                        replace it with one from your computer or Odoo's
+                        built-in stock-photo library.</p>
+                    </li>
+                    <li>
+                        <p><i class="fa fa-paint-brush" /> Click a block
+                        itself (not the text or image inside it) and the
+                        <strong>Customize</strong> tab shows that block's
+                        own options - background color, spacing, layout -
+                        without touching any other block on the page.</p>
+                    </li>
+                </ol>
+
+                <div class="oe-diagram">
+                    <div class="oe-mock-bar">
+                        <span class="oe-mock-dots"><span /><span /><span /></span>
+                        Customize
+                    </div>
+                    <div class="oe-mock-body">
+                        <p class="mb-2"><strong>Background</strong></p>
+                        <p>
+                            <span class="oe-badge" style="background:#eef1f3">◻</span>
+                            <span class="oe-badge oe-badge-accent">◼</span>
+                            <span class="oe-badge oe-badge-good">◼</span>
+                            <span class="oe-badge oe-badge-warn">◼</span>
+                        </p>
+                        <p class="mb-0 text-muted">Spacing, layout, and
+                        more sit below - all scoped to the block you
+                        selected.</p>
+                    </div>
+                    <p class="oe-diagram-caption">
+                        <span class="oe-diagram-caption-tag">Illustration</span>
+                        the idea of a per-block style panel - the real one
+                        has many more controls.
+                    </p>
+                </div>
+
+                <div class="oe-callout oe-callout-warn">
+                    <span class="oe-callout-icon"><i class="fa fa-floppy-o" /></span>
+                    <div>
+                        <span class="oe-callout-label">Don't forget to save</span>
+                        <p>When it looks right, click <strong>Save</strong>
+                        in the top bar. <strong>Discard</strong> throws
+                        away everything since your last save.</p>
+                    </div>
+                </div>
+            </div>
         </field>
     </record>
 
@@ -135,12 +340,44 @@
         <field name="slide_category">article</field>
         <field name="sequence">31</field>
         <field name="html_content" type="html">
-            <p>If you didn't add a new page to the menu when you created
-            it, open <strong>Site &gt; Menu Editor</strong> at any time:
-            it lists every item in your navigation bar, in order. Add an
-            entry, point it at the page you built, and drag entries up or
-            down to reorder them - the visitor-facing menu updates the
-            moment you save.</p>
+            <div class="oe-course-content">
+                <p>If you didn't add a new page to the menu when you
+                created it, open <strong>Site &gt; Menu Editor</strong> at
+                any time: it lists every item in your navigation bar, in
+                order. Add an entry, point it at the page you built, and
+                drag entries up or down to reorder them.</p>
+
+                <div class="oe-diagram">
+                    <div class="oe-flow">
+                        <div class="oe-flow-step">
+                            Home  ·  About  ·  Contact
+                        </div>
+                        <span class="oe-flow-arrow"><i class="fa fa-long-arrow-right" /></span>
+                        <div class="oe-flow-step">
+                            <i class="fa fa-bars" /> Menu Editor
+                        </div>
+                        <span class="oe-flow-arrow"><i class="fa fa-long-arrow-right" /></span>
+                        <div class="oe-flow-step">
+                            Home  ·  About  · 
+                            <strong>Our Programs</strong>  ·  Contact
+                        </div>
+                    </div>
+                    <p class="oe-diagram-caption">
+                        <span class="oe-diagram-caption-tag">Illustration</span>
+                        adding "Our Programs" to the navigation bar via the
+                        Menu Editor.
+                    </p>
+                </div>
+
+                <div class="oe-callout oe-callout-good">
+                    <span class="oe-callout-icon"><i class="fa fa-bolt" /></span>
+                    <div>
+                        <span class="oe-callout-label">Instant</span>
+                        <p>The visitor-facing menu updates the moment you
+                        save - no separate publish step for menu changes.</p>
+                    </div>
+                </div>
+            </div>
         </field>
     </record>
 
@@ -150,13 +387,47 @@
         <field name="slide_category">article</field>
         <field name="sequence">32</field>
         <field name="html_content" type="html">
-            <p>A brand-new page starts out <strong>Unpublished</strong> -
-            visible to you while signed in, invisible to an ordinary
-            visitor. The publish toggle sits in the top-right of the page
-            when you're viewing it: switch it to <strong>Published</strong>
-            once the page is actually ready. This is deliberate - it lets
-            you build and review a page for as long as you need before
-            anyone outside your organization ever sees it.</p>
+            <div class="oe-course-content">
+                <p>A brand-new page starts out <strong>Unpublished</strong>
+                - visible to you while signed in, invisible to an ordinary
+                visitor. The publish toggle sits in the top-right of the
+                page when you're viewing it.</p>
+
+                <div class="oe-diagram">
+                    <div class="oe-flow">
+                        <div class="oe-flow-step">
+                            <span class="oe-badge">
+                                <i class="fa fa-eye-slash" /> Unpublished
+                            </span>
+                            <p class="mb-0 mt-2 text-muted">Visible to you
+                            only</p>
+                        </div>
+                        <span class="oe-flow-arrow"><i class="fa fa-toggle-on" /></span>
+                        <div class="oe-flow-step">
+                            <span class="oe-badge oe-badge-good">
+                                <i class="fa fa-eye" /> Published
+                            </span>
+                            <p class="mb-0 mt-2 text-muted">Visible to
+                            everyone</p>
+                        </div>
+                    </div>
+                    <p class="oe-diagram-caption">
+                        <span class="oe-diagram-caption-tag">Illustration</span>
+                        the two states every page moves through, and the
+                        toggle that switches between them.
+                    </p>
+                </div>
+
+                <div class="oe-callout">
+                    <span class="oe-callout-icon"><i class="fa fa-clock-o" /></span>
+                    <div>
+                        <span class="oe-callout-label">Take your time</span>
+                        <p>This is deliberate - it lets you build and
+                        review a page for as long as you need before anyone
+                        outside your organization ever sees it.</p>
+                    </div>
+                </div>
+            </div>
         </field>
     </record>
 
@@ -174,22 +445,46 @@
         <field name="slide_category">article</field>
         <field name="sequence">41</field>
         <field name="html_content" type="html">
-            <p>Under <strong>Site &gt; Settings</strong> (in the
-            Configuration menu), the settings worth knowing early on are
-            under <strong>Website Identification</strong> - your site's
-            <strong>Name</strong> and <strong>Favicon</strong> (the small
-            icon shown in a browser tab) - and the <strong>Company</strong>
-            section, which controls what address/contact details the site
-            pulls in automatically. You'll also see settings for Google
-            Analytics, a Google Search Console code, and a robots.txt
-            file - those are genuinely more technical, aimed at someone
-            actively working on search-engine visibility, and are safe to
-            leave alone or hand off to a developer later.</p>
-            <p>For any one page, <strong>Site &gt; This Page &gt; Optimize
-            SEO</strong> lets you set a page title, description, and
-            keywords that show up in search results - worth doing for your
-            homepage and any page you expect people to search for, but not
-            something to worry over for every single page on day one.</p>
+            <div class="oe-course-content">
+                <p>Under <strong>Site &gt; Settings</strong> (in the
+                Configuration menu) you'll find a long list of options.
+                Most of them can wait.</p>
+
+                <div class="oe-columns">
+                    <div class="oe-column">
+                        <h4><i class="fa fa-check-circle text-success" /> Worth doing now</h4>
+                        <ul>
+                            <li><strong>Website Identification</strong> -
+                            Name and Favicon (the small icon in a browser
+                            tab)</li>
+                            <li><strong>Company</strong> - the address/
+                            contact details the site pulls in
+                            automatically</li>
+                        </ul>
+                    </div>
+                    <div class="oe-column">
+                        <h4><i class="fa fa-clock-o text-muted" /> Fine to leave for later</h4>
+                        <ul class="text-muted">
+                            <li>Google Analytics</li>
+                            <li>Google Search Console code</li>
+                            <li>robots.txt</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="oe-callout">
+                    <span class="oe-callout-icon"><i class="fa fa-search" /></span>
+                    <div>
+                        <span class="oe-callout-label">Per-page SEO</span>
+                        <p><strong>Site &gt; This Page &gt; Optimize
+                        SEO</strong> lets you set a page title, description,
+                        and keywords that show up in search results - worth
+                        doing for your homepage and anything you expect
+                        people to search for, but not something to worry
+                        over for every single page on day one.</p>
+                    </div>
+                </div>
+            </div>
         </field>
     </record>
 
