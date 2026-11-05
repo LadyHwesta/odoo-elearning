@@ -31,6 +31,8 @@ and scoped under `.oe-course-content` so it can't leak into the rest of
 the site's theme. This is the pattern the other eLearning packs in this
 account are being brought in line with.
 
+Screenshots in `static/img/` come from a local test database with sample data.
+
 ## Access
 
 Gated (`visibility="members"`, `enroll="invite"`); everyone in

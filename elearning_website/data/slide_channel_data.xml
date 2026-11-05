@@ -133,6 +133,13 @@
                         covers almost everything a new page needs.</p>
                     </div>
                 </div>
+                <div class="oe-diagram">
+                    <img src="/elearning_website/static/img/site_menu.png" alt="The Site menu open on a website, listing Homepage, Menu Editor, Content and This page" class="img-fluid" />
+                    <p class="oe-diagram-caption">
+                        <span class="oe-diagram-caption-tag">Screenshot</span>
+                        the real Site menu.
+                    </p>
+                </div>
             </div>
         </field>
     </record>
@@ -258,6 +265,13 @@
                         to edit its actual content.</p>
                     </div>
                 </div>
+                <div class="oe-diagram">
+                    <img src="/elearning_website/static/img/site_edit.png" alt="The website in edit mode, with the Blocks, Style and Theme tabs and block categories on the right" class="img-fluid" />
+                    <p class="oe-diagram-caption">
+                        <span class="oe-diagram-caption-tag">Screenshot</span>
+                        edit mode, with the Blocks tab open.
+                    </p>
+                </div>
             </div>
         </field>
     </record>
@@ -283,7 +297,7 @@
                     <li>
                         <p><i class="fa fa-paint-brush" /> Click a block
                         itself (not the text or image inside it) and the
-                        <strong>Customize</strong> tab shows that block's
+                        <strong>Style</strong> tab shows that block's
                         own options - background color, spacing, layout -
                         without touching any other block on the page.</p>
                     </li>
@@ -292,7 +306,7 @@
                 <div class="oe-diagram">
                     <div class="oe-mock-bar">
                         <span class="oe-mock-dots"><span /><span /><span /></span>
-                        Customize
+                        Style
                     </div>
                     <div class="oe-mock-body">
                         <p class="mb-2"><strong>Background</strong></p>
@@ -446,8 +460,7 @@
         <field name="sequence">41</field>
         <field name="html_content" type="html">
             <div class="oe-course-content">
-                <p>Under <strong>Site &gt; Settings</strong> (in the
-                Configuration menu) you'll find a long list of options.
+                <p>Under <strong>Website › Configuration › Settings</strong> you'll find a long list of options.
                 Most of them can wait.</p>
 
                 <div class="oe-columns">
