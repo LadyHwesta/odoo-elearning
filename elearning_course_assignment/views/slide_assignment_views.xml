@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_slide_assignment_list" model="ir.ui.view">
+        <field name="name">slide.assignment.list</field>
+        <field name="model">slide.assignment</field>
+        <field name="arch" type="xml">
+            <list create="0" decoration-danger="is_overdue" decoration-muted="state == 'done'">
+                <field name="is_overdue" column_invisible="1" />
+                <field name="partner_id" />
+                <field name="channel_id" />
+                <field name="team_id" />
+                <field name="completion" widget="progressbar" />
+                <field name="state" widget="badge"
+                       decoration-success="state == 'done'" decoration-info="state == 'in_progress'" />
+                <field name="date_due" />
+                <field name="assigned_by_id" optional="hide" />
+                <field name="date_assigned" optional="hide" />
+            </list>
+        </field>
+    </record>
+
+    <record id="view_slide_assignment_form" model="ir.ui.view">
+        <field name="name">slide.assignment.form</field>
+        <field name="model">slide.assignment</field>
+        <field name="arch" type="xml">
+            <form create="0">
+                <header>
+                    <button name="action_open_course" type="object" string="Open Course"
+                            class="btn-primary" />
+                    <field name="state" widget="statusbar" />
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="channel_id" readonly="1" /></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="partner_id" readonly="1" />
+                            <field name="team_id" readonly="1" />
+                            <field name="completion" widget="progressbar" />
+                        </group>
+                        <group>
+                            <field name="date_due" />
+                            <field name="assigned_by_id" />
+                            <field name="date_assigned" />
+                        </group>
+                    </group>
+                </sheet>
+                <chatter />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_slide_assignment_search" model="ir.ui.view">
+        <field name="name">slide.assignment.search</field>
+        <field name="model">slide.assignment</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="partner_id" />
+                <field name="channel_id" />
+                <field name="team_id" />
+                <filter name="overdue" string="Overdue" domain="[('is_overdue', '=', True)]" />
+                <filter name="unfinished" string="Not Finished" domain="[('state', '!=', 'done')]" />
+                <filter name="finished" string="Finished" domain="[('state', '=', 'done')]" />
+                <group>
+                    <filter name="group_team" string="Team" context="{'group_by': 'team_id'}" />
+                    <filter name="group_course" string="Course" context="{'group_by': 'channel_id'}" />
+                    <filter name="group_learner" string="Learner" context="{'group_by': 'partner_id'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_slide_assignment" model="ir.actions.act_window">
+        <field name="name">Assignments</field>
+        <field name="res_model">slide.assignment</field>
+        <field name="view_mode">list,form</field>
+        <field name="context">{'search_default_unfinished': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">No course assignments yet</p>
+            <p>Open a learning team and click Assign Courses.</p>
+        </field>
+    </record>
+</odoo>

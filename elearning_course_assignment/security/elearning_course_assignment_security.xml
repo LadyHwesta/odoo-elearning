@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="group_learning_team_lead" model="res.groups">
+        <field name="name">Team Lead</field>
+        <field name="sequence">5</field>
+        <field name="privilege_id" ref="website_slides.res_groups_privilege_elearning" />
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]" />
+        <field name="comment">Assigns published courses to the members of teams they lead,
+and follows their progress. Can't edit courses.</field>
+    </record>
+
+    <record id="website_slides.group_website_slides_officer" model="res.groups">
+        <field name="implied_ids" eval="[(4, ref('group_learning_team_lead'))]" />
+    </record>
+
+    <!-- Leads see the eLearning app (for their Assignments menu). -->
+    <record id="website_slides.website_slides_menu_root" model="ir.ui.menu">
+        <field name="group_ids" eval="[(4, ref('group_learning_team_lead'))]" />
+    </record>
+
+    <data noupdate="1">
+
+        <record id="rule_slide_team_lead" model="ir.rule">
+            <field name="name">Learning Team: leads see their own teams</field>
+            <field name="model_id" ref="model_slide_team" />
+            <field name="domain_force">[('lead_ids', 'in', user.id)]</field>
+            <field name="groups" eval="[(4, ref('group_learning_team_lead'))]" />
+        </record>
+        <record id="rule_slide_team_member" model="ir.rule">
+            <field name="name">Learning Team: members see teams they're on</field>
+            <field name="model_id" ref="model_slide_team" />
+            <field name="domain_force">[('member_ids', 'in', user.partner_id.id)]</field>
+            <field name="groups" eval="[(4, ref('base.group_user'))]" />
+        </record>
+        <record id="rule_slide_team_officer" model="ir.rule">
+            <field name="name">Learning Team: officers see every team</field>
+            <field name="model_id" ref="model_slide_team" />
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[(4, ref('website_slides.group_website_slides_officer'))]" />
+        </record>
+
+        <record id="rule_slide_assignment_learner" model="ir.rule">
+            <field name="name">Course Assignment: learners see their own</field>
+            <field name="model_id" ref="model_slide_assignment" />
+            <field name="domain_force">[('partner_id', '=', user.partner_id.id)]</field>
+            <field name="groups" eval="[(4, ref('base.group_user'))]" />
+        </record>
+        <record id="rule_slide_assignment_lead" model="ir.rule">
+            <field name="name">Course Assignment: leads see their teams'</field>
+            <field name="model_id" ref="model_slide_assignment" />
+            <field name="domain_force">[('team_id.lead_ids', 'in', user.id)]</field>
+            <field name="groups" eval="[(4, ref('group_learning_team_lead'))]" />
+        </record>
+        <record id="rule_slide_assignment_officer" model="ir.rule">
+            <field name="name">Course Assignment: officers see all</field>
+            <field name="model_id" ref="model_slide_assignment" />
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[(4, ref('website_slides.group_website_slides_officer'))]" />
+        </record>
+
+        <!-- To pick a course, a lead has to see it, including members-only ones. -->
+        <record id="rule_slide_channel_team_lead" model="ir.rule">
+            <field name="name">Channel: team leads read every published course</field>
+            <field name="model_id" ref="website_slides.model_slide_channel" />
+            <field name="domain_force">[('website_published', '=', True)]</field>
+            <field name="groups" eval="[(4, ref('group_learning_team_lead'))]" />
+            <field name="perm_read" eval="1" />
+            <field name="perm_write" eval="0" />
+            <field name="perm_create" eval="0" />
+            <field name="perm_unlink" eval="0" />
+        </record>
+
+    </data>
+</odoo>

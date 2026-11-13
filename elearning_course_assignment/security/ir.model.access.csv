@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_slide_team_lead,slide.team.lead,model_slide_team,group_learning_team_lead,1,1,0,0
+access_slide_team_officer,slide.team.officer,model_slide_team,website_slides.group_website_slides_officer,1,1,1,1
+access_slide_assignment_user,slide.assignment.user,model_slide_assignment,base.group_user,1,0,0,0
+access_slide_assignment_lead,slide.assignment.lead,model_slide_assignment,group_learning_team_lead,1,1,0,0
+access_slide_assignment_officer,slide.assignment.officer,model_slide_assignment,website_slides.group_website_slides_officer,1,1,1,1
+access_slide_assign_wizard_lead,slide.assign.wizard.lead,model_slide_assign_wizard,group_learning_team_lead,1,1,1,0
+access_slide_team_user,slide.team.user,model_slide_team,base.group_user,1,0,0,0

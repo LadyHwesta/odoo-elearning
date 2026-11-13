@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="mail_template_assignment_due" model="mail.template">
+        <field name="name">eLearning: assigned course due</field>
+        <field name="model_id" ref="model_slide_assignment" />
+        <field name="subject">Reminder: {{ object.channel_id.name }} is due</field>
+        <field name="email_from">{{ (object.assigned_by_id.email_formatted or object.env.company.email_formatted) }}</field>
+        <field name="partner_to">{{ object.partner_id.id }}</field>
+        <field name="auto_delete" eval="True" />
+        <field name="body_html" type="html">
+<div>
+    <p>Hello <t t-out="object.partner_id.name or ''" />,</p>
+    <p><t t-out="object.assigned_by_id.name or ''" /> asked you to finish the course
+    <strong t-out="object.channel_id.name or ''" /> by
+    <t t-out="format_date(object.date_due) or ''" />. You're
+    <t t-out="object.completion or 0" />% of the way through.</p>
+    <p><a t-att-href="'%s/slides/%s' % (object.get_base_url(), object.channel_id.id)"
+          style="background-color: #875A7B; padding: 8px 16px; color: #fff; text-decoration: none; border-radius: 5px;">Continue the course</a></p>
+</div>
+        </field>
+    </record>
+</odoo>

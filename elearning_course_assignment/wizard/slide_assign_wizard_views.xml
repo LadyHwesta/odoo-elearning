@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_slide_assign_wizard_form" model="ir.ui.view">
+        <field name="name">slide.assign.wizard.form</field>
+        <field name="model">slide.assign.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="team_member_ids" invisible="1" />
+                <group>
+                    <field name="team_id" readonly="1" />
+                    <field name="channel_ids" widget="many2many_tags"
+                           options="{'no_create': true}" placeholder="Pick one or more courses" />
+                    <field name="partner_ids" widget="many2many_tags"
+                           domain="[('id', 'in', team_member_ids)]"
+                           options="{'no_create': true}" />
+                    <field name="date_due" />
+                    <field name="send_email" />
+                </group>
+                <p class="text-muted">
+                    They're enrolled straight away. Anyone with an Odoo login gets a to-do
+                    due on that date, and everyone still unfinished then is emailed a reminder.
+                </p>
+                <footer>
+                    <button name="action_assign" type="object" string="Assign" class="btn-primary" />
+                    <button string="Cancel" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>
