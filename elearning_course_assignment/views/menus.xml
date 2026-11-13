@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <menuitem id="menu_slide_assignment_root" name="Assignments"
+              parent="website_slides.website_slides_menu_root" sequence="5"
+              groups="group_learning_team_lead" />
+    <menuitem id="menu_slide_assignment" name="Progress"
+              parent="menu_slide_assignment_root" action="action_slide_assignment" sequence="10" />
+    <menuitem id="menu_slide_team" name="Teams"
+              parent="menu_slide_assignment_root" action="action_slide_team" sequence="20" />
+</odoo>

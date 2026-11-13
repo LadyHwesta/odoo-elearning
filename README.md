@@ -17,6 +17,11 @@ each has its own eLearning packs for what it builds.
   org's public site: pages, blocks, menus, publishing, and the handful of
   settings worth knowing (name, favicon, company info) without wading
   into the more technical ones (SEO consoles, analytics keys, robots.txt).
+- [`elearning_course_assignment/`](elearning_course_assignment/) - not a
+  course: lets a manager or committee chair assign published courses to
+  the members of their **Learning Team**, with a due date, a to-do and a
+  reminder email, and follow their progress, without being an eLearning
+  administrator. eLearning > Assignments.
 
 ## Why a separate repo
 

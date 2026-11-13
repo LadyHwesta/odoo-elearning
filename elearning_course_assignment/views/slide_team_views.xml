@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_slide_team_form" model="ir.ui.view">
+        <field name="name">slide.team.form</field>
+        <field name="model">slide.team</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_assign_courses" type="object" string="Assign Courses"
+                            class="btn-primary" />
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_assignments" type="object" class="oe_stat_button"
+                                icon="fa-graduation-cap">
+                            <field name="assignment_count" widget="statinfo" string="Assignments" />
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <label for="name" />
+                        <h1><field name="name" placeholder="e.g. Events Committee" /></h1>
+                    </div>
+                    <group>
+                        <field name="lead_ids" widget="many2many_tags"
+                               groups="website_slides.group_website_slides_officer" />
+                        <field name="lead_ids" widget="many2many_tags" readonly="1"
+                               groups="!website_slides.group_website_slides_officer" />
+                        <field name="company_id" groups="base.group_multi_company" />
+                        <field name="description" />
+                    </group>
+                    <field name="member_ids" widget="many2many" options="{'no_create': true}">
+                        <list>
+                            <field name="name" />
+                            <field name="email" />
+                            <field name="phone" optional="hide" />
+                        </list>
+                    </field>
+                </sheet>
+                <chatter />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_slide_team_list" model="ir.ui.view">
+        <field name="name">slide.team.list</field>
+        <field name="model">slide.team</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name" />
+                <field name="lead_ids" widget="many2many_avatar_user" />
+                <field name="member_count" string="Members" />
+                <field name="assignment_count" string="Assignments" />
+            </list>
+        </field>
+    </record>
+
+    <record id="action_slide_team" model="ir.actions.act_window">
+        <field name="name">Learning Teams</field>
+        <field name="res_model">slide.team</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Create a learning team</p>
+            <p>A team is a department, committee or crew, its lead (a manager or chair),
+            and its members. Leads assign courses to their members and follow their progress.</p>
+        </field>
+    </record>
+</odoo>

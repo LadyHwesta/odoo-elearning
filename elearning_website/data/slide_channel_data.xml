@@ -18,6 +18,7 @@
     <!-- =================== Section 1: Getting oriented =================== -->
     <record id="section_orient" model="slide.slide">
         <field name="channel_id" ref="channel_website" />
+        <field name="is_published" eval="True" />
         <field name="name">Getting oriented</field>
         <field name="is_category" eval="True" />
         <field name="sequence">10</field>
@@ -25,6 +26,7 @@
 
     <record id="lesson_open_editor" model="slide.slide">
         <field name="channel_id" ref="channel_website" />
+        <field name="is_published" eval="True" />
         <field name="name">Opening the website editor</field>
         <field name="slide_category">article</field>
         <field name="sequence">11</field>
@@ -76,6 +78,7 @@
 
     <record id="lesson_get_around" model="slide.slide">
         <field name="channel_id" ref="channel_website" />
+        <field name="is_published" eval="True" />
         <field name="name">Finding your way around</field>
         <field name="slide_category">article</field>
         <field name="sequence">12</field>
@@ -147,6 +150,7 @@
     <!-- =================== Section 2: Building pages =================== -->
     <record id="section_pages" model="slide.slide">
         <field name="channel_id" ref="channel_website" />
+        <field name="is_published" eval="True" />
         <field name="name">Building pages</field>
         <field name="is_category" eval="True" />
         <field name="sequence">20</field>
@@ -154,6 +158,7 @@
 
     <record id="lesson_new_page" model="slide.slide">
         <field name="channel_id" ref="channel_website" />
+        <field name="is_published" eval="True" />
         <field name="name">Adding a new page</field>
         <field name="slide_category">article</field>
         <field name="sequence">21</field>
@@ -216,6 +221,7 @@
 
     <record id="lesson_blocks" model="slide.slide">
         <field name="channel_id" ref="channel_website" />
+        <field name="is_published" eval="True" />
         <field name="name">Working with blocks</field>
         <field name="slide_category">article</field>
         <field name="sequence">22</field>
@@ -278,6 +284,7 @@
 
     <record id="lesson_editing" model="slide.slide">
         <field name="channel_id" ref="channel_website" />
+        <field name="is_published" eval="True" />
         <field name="name">Editing text, images, and colors</field>
         <field name="slide_category">article</field>
         <field name="sequence">23</field>
@@ -343,6 +350,7 @@
     <!-- ============= Section 3: Menus and publishing ============= -->
     <record id="section_publish" model="slide.slide">
         <field name="channel_id" ref="channel_website" />
+        <field name="is_published" eval="True" />
         <field name="name">Menus and publishing</field>
         <field name="is_category" eval="True" />
         <field name="sequence">30</field>
@@ -350,6 +358,7 @@
 
     <record id="lesson_menu" model="slide.slide">
         <field name="channel_id" ref="channel_website" />
+        <field name="is_published" eval="True" />
         <field name="name">Adding a page to the menu</field>
         <field name="slide_category">article</field>
         <field name="sequence">31</field>
@@ -397,6 +406,7 @@
 
     <record id="lesson_publish" model="slide.slide">
         <field name="channel_id" ref="channel_website" />
+        <field name="is_published" eval="True" />
         <field name="name">Publishing a page</field>
         <field name="slide_category">article</field>
         <field name="sequence">32</field>
@@ -448,6 +458,7 @@
     <!-- ============ Section 4: Settings worth knowing ============ -->
     <record id="section_settings" model="slide.slide">
         <field name="channel_id" ref="channel_website" />
+        <field name="is_published" eval="True" />
         <field name="name">Settings worth knowing</field>
         <field name="is_category" eval="True" />
         <field name="sequence">40</field>
@@ -455,6 +466,7 @@
 
     <record id="lesson_settings" model="slide.slide">
         <field name="channel_id" ref="channel_website" />
+        <field name="is_published" eval="True" />
         <field name="name">Name, favicon, company info, and a word on SEO</field>
         <field name="slide_category">article</field>
         <field name="sequence">41</field>
@@ -504,6 +516,7 @@
     <!-- ========================= Quiz ========================= -->
     <record id="slide_quiz" model="slide.slide">
         <field name="channel_id" ref="channel_website" />
+        <field name="is_published" eval="True" />
         <field name="name">Check your understanding</field>
         <field name="slide_category">quiz</field>
         <field name="sequence">90</field>
