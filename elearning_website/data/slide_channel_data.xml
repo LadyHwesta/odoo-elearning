@@ -3,6 +3,7 @@
 
     <record id="channel_website" model="slide.channel">
         <field name="name">Building Your Organization's Website</field>
+        <field name="image_1920" type="base64" file="elearning_website/static/img/cover_website.png" />
         <field name="channel_type">training</field>
         <field name="description" type="html">
             <p>A non-technical, click-by-click guide to running your
