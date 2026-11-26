@@ -7,7 +7,7 @@ organization's custom modules. If you're looking for training on a
 custom suite instead, see
 [`nonprofit-addons`](https://github.com/LadyHwesta/nonprofit-addons),
 [`odoo-addons`](https://github.com/LadyHwesta/odoo-addons) (amateur radio
-club), or [`paramedic-tattoo-addons`](https://github.com/LadyHwesta/paramedic-tattoo-addons) -
+club), or [`practitioner-addons`](https://github.com/LadyHwesta/practitioner-addons) -
 each has its own eLearning packs for what it builds.
 
 ## Modules
